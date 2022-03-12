@@ -1,5 +1,5 @@
 import React from "react";
-import {OnnOff} from "./OnnOff";
+import {OnOff} from "./OnOff";
 
 type AccordionPropsType = {
     bool: boolean;
@@ -11,7 +11,7 @@ export const Accordion = (props: AccordionPropsType) => {
 
     return (
         <div>
-            <OnnOff bool={props.bool}
+            <OnOff bool={props.bool}
                     setBool={props.setBool}/>
 
         </div>

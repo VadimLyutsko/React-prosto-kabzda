@@ -1,0 +1,44 @@
+$red: red;
+$green: green;
+$bold: bold;
+$border: 1px solid black;
+$border-radius: 50px;
+@mixin margin5 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@mixin border {
+  border-radius: $border-radius;
+  border: $border;
+}
+
+.wrap {
+  margin: 50px auto;
+  width: 200px;
+  background-color: rgba(240, 24, 242, 0.5);
+}
+
+.red {
+  font-weight: $bold;
+  color: $red;
+  //@include margin5;
+}
+
+.green {
+  font-weight: $bold;
+  color: $green;
+  //@include margin5;
+}
+
+.indicatorRed {
+  color: $red;
+  @include border;
+@include margin5;
+}
+
+.indicatorGreen {
+  color: $green;
+  @include border;
+  @include margin5;
+}
