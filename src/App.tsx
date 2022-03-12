@@ -3,14 +3,15 @@ import './App.css';
 import {Accordion} from "./components/Accordion";
 
 function App() {
-    const [bool, setBoul] = useState(true);
+    const [bool, setBool] = useState(true);
 
-  return (
-    <div className="App">
-      <Accordion
-          bool={bool}/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Accordion
+                bool={bool}
+                setBool={setBool}/>
+        </div>
+    );
 }
 
 export default App;

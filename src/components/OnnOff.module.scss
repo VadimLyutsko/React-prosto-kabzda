@@ -1,0 +1,26 @@
+$red: red;
+$green: green;
+$bold: bold;
+@mixin margin5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.wrap {
+  margin: auto;
+  width: 200px;
+  margin-top: 50px;
+  background-color: rgba(240, 24, 242, 0.5);
+}
+
+.red {
+  font-weight: $bold;
+  color: $red;
+  //@include margin5;
+}
+
+.green {
+  font-weight: $bold;
+  color: $green;
+  //@include margin5;
+}
