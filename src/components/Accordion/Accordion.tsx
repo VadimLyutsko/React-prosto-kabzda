@@ -1,7 +1,8 @@
 import React from "react";
-import {OnOff} from "./OnOff";
+import {OnOff} from "../OnOff/OnOff";
 
-type AccordionPropsType = {
+
+export type AccordionPropsType = {
     bool: boolean;
     setBool: (type: boolean) => void
 }

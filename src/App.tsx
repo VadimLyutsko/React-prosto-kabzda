@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Accordion} from "./components/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
+
 
 function App() {
     const [bool, setBool] = useState(true);
