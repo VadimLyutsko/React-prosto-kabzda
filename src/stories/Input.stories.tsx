@@ -35,37 +35,39 @@ export const TrackValueOfUncontrolledInputByButtonPress = () => {
 
 };
 
-export const controlledInput = () => {
-    const [parentValue, setParentValue] = useState("");
-    const change = (e: ChangeEvent<HTMLInputElement>) => {
-        setParentValue(e.currentTarget.value)
-    }
-    return (
-        <input value={parentValue} onChange={change}/>
-    )
-}
+// export const controlledInput = () => {
+//     const [parentValue, setParentValue] = useState("");
+//     const change = (e: ChangeEvent<HTMLInputElement>) => {
+//         setParentValue(e.currentTarget.value)
+//     }
+//     return (
+//         <input value={parentValue} onChange={change}/>
+//     )
+// }
 
-export const controlledCheckbox = () => {
-    const [parentValue, setParentValue] = useState(true);
-    const change = (e: ChangeEvent<HTMLInputElement>) => {
-        setParentValue(e.currentTarget.checked)
-    }
-    return (
-        <input type='checkbox' checked={parentValue}  onChange={change}/>
-    )
-}
+// export const controlledCheckbox = () => {
+//
+//     const [parentValue, setParentValue] = useState(true);
+//     const change = (e: ChangeEvent<HTMLInputElement>) => {
+//         setParentValue(e.currentTarget.checked)
+//     }
+//     return (
+//         <input type='checkbox' checked={parentValue}  onChange={change}/>
+//     )
+// }
 
-export const controlledSelect = () => {
-    const [parentValue, setParentValue] = useState<string | undefined>(undefined);
-    const change = (e: ChangeEvent<HTMLSelectElement>) => {
-        setParentValue(e.currentTarget.value)
-    }
-    return (
-        <select value={parentValue} onChange={change}>
-            <option >none</option>
-            <option value={"1"}>Minsk</option>
-            <option value={"2"}>Moscow</option>
-            <option value={"3"}>Kiev</option>
-        </select>
-    )
-}
+// export const controlledSelect = () => {
+//
+//     const [parentValue, setParentValue] = useState<string | undefined>(undefined);
+//     const change = (e: ChangeEvent<HTMLSelectElement>) => {
+//         setParentValue(e.currentTarget.value)
+//     }
+//     return (
+//         <select value={parentValue} onChange={change}>
+//             <option >none</option>
+//             <option value={"1"}>Minsk</option>
+//             <option value={"2"}>Moscow</option>
+//             <option value={"3"}>Kiev</option>
+//         </select>
+//     )
+// }
