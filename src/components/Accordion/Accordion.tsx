@@ -1,5 +1,4 @@
 import React from "react";
-import {OnOff} from "../OnOff/OnOff";
 
 type itemType ={
     title:string
