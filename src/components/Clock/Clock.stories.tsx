@@ -4,14 +4,15 @@ import {Clock} from "./Clock";
 
 export default {
     title: "Clock",
-    component:Clock
+    component: Clock,
+    }
+
+export const BaseAnalogExample = () => {
+      return <Clock mode={"analog"}/>
 }
 
-export const BaseExample = () => {
-    const [counter, setCounter] = useState(0)//вместо начального значения можем дать тяжелую функцию(как р.мемо)
-
-    return <Clock/>
+export const BaseDigitalExample = () => {
+    return <Clock mode={"digital"}/>
 }
-
 
 
