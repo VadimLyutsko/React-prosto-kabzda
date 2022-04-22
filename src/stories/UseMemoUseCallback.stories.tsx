@@ -83,6 +83,11 @@ export const LikeUseCallback = () => {
     const [counter, setCounter] = useState(0)
     const [books, setBooks] = useState(["React", "JS", "CSS"])
 
+    const memoizedAddBook = useCallback(() => {
+        console.log(books)
+        const newBook = [...books, "Angular" + new Date().getTime()];
+        setBooks(newBook)
+    }, [books])
 
     // const memoizedAddBook = useMemo(() => {
     //     return ()=>{
@@ -92,26 +97,14 @@ export const LikeUseCallback = () => {
     //     }
     // }, [books])
 
-
-    const memoizedAddBook2 = useCallback(() => {
-        console.log(books)
-        const newBook = [...books, "Angular" + new Date().getTime()];
-        setBooks(newBook)
-    }, [books])
-
-
     return <>
         <button onClick={() => setCounter(counter + 1)}>+</button>
         {counter}
-        <Book addBook={memoizedAddBook2}/>
+        <Book addBook={memoizedAddBook}/>
     </>
 }
 
-type BookSecretBooksType = {
-    addBook: () => void
-}
-
-const BooksSecret = (props: BookSecretBooksType) => {
+const BooksSecret = (props: { addBook: () => void }) => {
     console.log("BooksSecret")
     return <div>
         <button onClick={() => props.addBook()}>Add book</button>
