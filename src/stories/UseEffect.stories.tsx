@@ -38,25 +38,24 @@ export const SimpleExample = () => {
 
 
 export const SetTimeoutExample = () => {
-    const [counter, setCounter] = useState(1)
-    const [fake, setFake] = useState(1)
-    console.log("SimpleExample")
+
+    const [data, setData] = useState<string>()
+
 
     useEffect(() => {
 
         setInterval(() => {
-            setCounter((state) => state + 1)
+            let someData = new Date();
+            const dataNow = `${someData.getHours()}:${someData.getMinutes()}:${someData.getSeconds()}`;
+            setData(dataNow)
         }, 1000)
 
-    }, [])
-
-
+    }, [data])
 
 
     return <>
         <div>
-            counter: {counter}
-            fake:{fake}
+            {data}
         </div>
         {/*<button onClick={() => setCounter(counter + 1)}>Counter+</button>*/}
         {/*<button onClick={() => setFake(fake + 1)}>Fake+</button>*/}
